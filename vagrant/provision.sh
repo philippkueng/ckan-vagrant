@@ -14,7 +14,7 @@ sudo apt-get install python-dev postgresql libpq-dev python-pip python-virtualen
 echo "installing the dependencies available via pip"
 virtualenv --no-site-packages /root/pyenv
 source /root/pyenv/bin/activate
-pip install -e 'git+https://github.com/okfn/ckan.git@ckan-1.8#egg=ckan'
+pip install -e 'git+https://github.com/okfn/ckan.git#egg=ckan'
 pip install -r /root/pyenv/src/ckan/pip-requirements.txt
 
 echo "creating a postgres user and database"
@@ -27,7 +27,7 @@ cd /root/pyenv/src/ckan
 cp /vagrant/vagrant/development.ini development.ini
 cp /vagrant/vagrant/jetty /etc/default/jetty
 sudo mv /etc/solr/conf/schema.xml /etc/solr/conf/schema.xml.bak
-cp /root/pyenv/src/ckan/ckan/config/solr/schema-1.4.xml /home/vagrant/schema.xml
+cp /root/pyenv/src/ckan/ckan/config/solr/schema-2.0.xml /home/vagrant/schema.xml
 sudo ln -s /home/vagrant/schema.xml /etc/solr/conf/schema.xml
 
 echo "restarting jetty for the new configuration to kick-in"
