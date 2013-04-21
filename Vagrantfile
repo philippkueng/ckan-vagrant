@@ -12,5 +12,4 @@ Vagrant::Config.run do |config|
   config.vm.customize ["modifyvm", :id, "--memory", 1024]
   config.vm.customize ["modifyvm", :id, "--cpus", 1]
   config.ssh.forward_agent = true
-  config.vm.forward_port 5000, 5000
 end
