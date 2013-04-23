@@ -1,4 +1,4 @@
-# Vagrant box for CKAN (1.8)
+# Vagrant box for CKAN (2.0)
 
 [CKAN](http://ckan.org) (the apt-get for opendata) is an open-source portal application developed by the [OKFN](http://okfn.org).
 
@@ -13,7 +13,7 @@ In order to make the getting started part easier I created this shell script to 
 4. Move to the directory with your terminal application `cd ckan-vagrant/`
 5. Create the instance `vagrant up`
 6. Go get some coffee (it takes up to 15 minutes)
-7. Open [http://ckan.lo:5000](http://ckan.lo:5000) in your browser.
+7. Open [http://ckan.lo](http://ckan.lo) in your browser.
 	
 
 ## License
