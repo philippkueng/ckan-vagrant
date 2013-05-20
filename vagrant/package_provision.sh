@@ -34,9 +34,12 @@ sudo -u postgres createuser -S -D -R ckan_default
 sudo -u postgres psql -c "ALTER USER ckan_default with password 'pass'"
 sudo -u postgres createdb -O ckan_default ckan_default -E utf-8
 
+echo "initialize CKAN database"
+cp /vagrant/vagrant/package_production.ini /etc/ckan/default/production.ini
+sudo ckan db init
+
 echo "enabling filestore with local storage"
 sudo mkdir -p /var/lib/ckan/default
-cp /vagrant/vagrant/package_production.ini /etc/ckan/default/production.ini
 sudo chown www-data /var/lib/ckan/default
 sudo chmod u+rwx /var/lib/ckan/default
 sudo service apache2 restart
@@ -44,9 +47,10 @@ sudo service apache2 restart
 echo "creating an admin user"
 source /usr/lib/ckan/default/bin/activate
 cd /usr/lib/ckan/default/src/ckan
-paster sysadmin add admin -c /etc/ckan/default/production.ini
+paster --plugin=ckan user add admin email=admin@email.org password=pass -c /etc/ckan/default/production.ini
+paster --plugin=ckan sysadmin add admin -c /etc/ckan/default/production.ini
 
 echo "loading some multilingual test data"
-paster --plugin=ckan create-test-data translations
+paster --plugin=ckan create-test-data translations -c /etc/ckan/default/production.ini
 
 echo "you should now have a running instance on http://ckan.lo"
