@@ -26,7 +26,20 @@ sudo service jetty start
 
 echo "linking the solr schema file"
 sudo mv /etc/solr/conf/schema.xml /etc/solr/conf/schema.xml.bak
-sudo ln -s /usr/lib/ckan/default/src/ckan/ckan/config/solr/schema-2.0.xml /etc/solr/conf/schema.xml
+sudo ln -s /usr/lib/ckan/default/src/ckan/ckanext/multilingual/solr/dutch_stop.txt /etc/solr/conf/dutch_stop.txt
+sudo ln -s /usr/lib/ckan/default/src/ckan/ckanext/multilingual/solr/english_stop.txt /etc/solr/conf/english_stop.txt
+sudo ln -s /usr/lib/ckan/default/src/ckan/ckanext/multilingual/solr/fr_elision.txt /etc/solr/conf/fr_elision.txt
+sudo ln -s /usr/lib/ckan/default/src/ckan/ckanext/multilingual/solr/french_stop.txt /etc/solr/conf/french_stop.txt
+sudo ln -s /usr/lib/ckan/default/src/ckan/ckanext/multilingual/solr/german_stop.txt /etc/solr/conf/german_stop.txt
+sudo ln -s /usr/lib/ckan/default/src/ckan/ckanext/multilingual/solr/greek_stopwords.txt /etc/solr/conf/greek_stopwords.txt
+sudo ln -s /usr/lib/ckan/default/src/ckan/ckanext/multilingual/solr/italian_stop.txt /etc/solr/conf/italian_stop.txt
+sudo ln -s /usr/lib/ckan/default/src/ckan/ckanext/multilingual/solr/polish_stop.txt /etc/solr/conf/polish_stop.txt
+sudo ln -s /usr/lib/ckan/default/src/ckan/ckanext/multilingual/solr/portuguese_stop.txt /etc/solr/conf/portuguese_stop.txt
+sudo ln -s /usr/lib/ckan/default/src/ckan/ckanext/multilingual/solr/romanian_stop.txt /etc/solr/conf/romanian_stop.txt
+sudo ln -s /usr/lib/ckan/default/src/ckan/ckanext/multilingual/solr/spanish_stop.txt /etc/solr/conf/spanish_stop.txt
+sudo ln -s /usr/lib/ckan/default/src/ckan/ckanext/multilingual/solr/schema.xml /etc/solr/conf/schema.xml
+# sudo ln -s /usr/lib/ckan/default/src/ckan/ckan/config/solr/schema-2.0.xml /etc/solr/conf/schema.xml
+
 sudo service jetty restart
 
 echo "create a CKAN database in postgresql"
