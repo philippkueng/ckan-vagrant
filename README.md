@@ -13,7 +13,8 @@ In order to make the getting started part easier I created this shell script to 
 4. Move to the directory with your terminal application `cd ckan-vagrant/`
 5. Create the instance `vagrant up`
 6. Go get some coffee (it takes up to 15 minutes)
-7. Open [http://ckan.lo](http://ckan.lo) in your browser.
+7. Add to following line to `/etc/hosts`:  `192.168.19.97 ckan.lo`
+8. Open [http://ckan.lo](http://ckan.lo) in your browser.
 	
 
 ## License
