@@ -9,7 +9,7 @@ In order to make the getting started part easier I created this shell script to 
 
 1. Install [Virtualbox](https://www.virtualbox.org)
 2. Install [vagrant](http://www.vagrantup.com)
-3. Clone this repository `git clone git://github.com/philippkueng/ckan-vagrant.git`
+3. Clone this repository `git clone git@github.com:GitMachines/ckan-vagrant.git`
 4. Move to the directory with your terminal application `cd ckan-vagrant/`
 5. Create the instance `vagrant up`
 6. Go get some coffee (it takes up to 15 minutes)
@@ -117,7 +117,7 @@ you should now have a running instance on http://ckan.lo
 
 ## License
 
-DO WHAT THE FUCK YOU WANT TO PUBLIC LICENSE
+DO WHAT THE F***(sic) YOU WANT TO PUBLIC LICENSE
 Version 2, December 2004
 
 Copyright (C) 2004 Sam Hocevar <sam@hocevar.net>
