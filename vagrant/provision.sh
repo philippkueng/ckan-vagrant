@@ -20,7 +20,7 @@ sudo chmod -R a+rX /usr/local/ckan.lo
 cd /usr/local/ckan.lo/
 virtualenv --no-site-packages /usr/local/ckan.lo/pyenv
 source /usr/local/ckan.lo/pyenv/bin/activate
-pip install -e 'git+https://github.com/okfn/ckan.git@release-v2.0#egg=ckan'
+pip install -e 'git+https://github.com/okfn/ckan.git@release-v2.2#egg=ckan'
 pip install -r /usr/local/ckan.lo/pyenv/src/ckan/pip-requirements.txt
 pip install Pylons
 deactivate
