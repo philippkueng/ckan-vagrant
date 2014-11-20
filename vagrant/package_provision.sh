@@ -17,6 +17,9 @@ wget -q http://packaging.ckan.org/python-ckan-2.0_amd64.deb
 echo "installing the CKAN package"
 sudo dpkg -i python-ckan-2.0_amd64.deb
 
+echo "Preventing NGINX from being started on a reboot"
+sudo update-rc.d -f nginx disable
+
 echo "changing the apache configuration back to port 80"
 sudo cp /vagrant/vagrant/package_ports.conf /etc/apache2/ports.conf
 sudo cp /vagrant/vagrant/package_ckan_default.conf /etc/apache2/sites-available/ckan_default
